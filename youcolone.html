@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YoutubeClone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+
+    <style>
+        /* Stile per il menu opzioni */
+        .logomenu {
+            height: 24px;
+            margin-left: 24px;
+            margin-right: 24px;
+            cursor: pointer;
+        }
+
+        #menu-options {
+            display: none;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            padding: 100px;
+            cursor: pointer;
+            height: 800px;
+            margin-bottom: -100vh;
+    
+        }
+
+        #menu-options.active {
+            display: block;
+            opacity: 3; /* Mostra il menu con un'opacità completa quando è attivo */
+        }
+
+        .scritta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            top: 20px;
+            height: 100%; /* Riempi l'altezza dell'elemento genitore */
+            flex-direction: column; /* Imposta la direzione di visualizzazione verticale */
+
+        }
+    </style>
+</head>
+<body class="Sfondo">
+    <div class="header">
+        <div class="left-section">
+            <img class="logomenu" src="icons/hamburger-menu.svg" alt="" id="menu-icon">
+           
+           
+            <div id="menu-options" class="menu-options">
+               
+                <ul class="scritta">
+                    <li>Thank you For Watching</li> <br>
+                
+                    <a href="https://www.aminesalhi.it/officiale.html" target="_blank" rel="noopener noreferrer">
+                        <button class="cssbuttons-io">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor" d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"></path>
+                                </svg> Code
+                            </span>
+                        </button>
+                    </a>
+                    
+                </ul>
+            
+            </div>
+           
+            <script>
+                // JavaScript per gestire il clic sull'icona del menu
+                var menuIcon = document.getElementById('menu-icon');
+                var menuOptions = document.getElementById('menu-options');
+            
+                menuIcon.addEventListener('click', function() {
+                    if (menuOptions.style.display === 'block') {
+                        menuOptions.style.display = 'none';
+                        menuIcon.src = 'icons/hamburger-menu.svg'; // Cambia l'immagine all'originale
+                    } else {
+                        menuOptions.style.display = 'block';
+                        menuIcon.src = 'icons/close-icon.svg'; // Cambia l'immagine al menu chiuso
+                    }
+                });
+            
+                // Aggiungi un listener per chiudere il menu quando si fa clic ovunque al di fuori del menu
+                document.addEventListener('click', function(event) {
+                    var isClickInsideMenu = menuIcon.contains(event.target) || menuOptions.contains(event.target);
+            
+                    if (!isClickInsideMenu) {
+                        menuOptions.style.display = 'none';
+                        menuIcon.src = 'icons/hamburger-menu.svg'; // Cambia l'immagine all'originale
+                    }
+                });
+            </script>
+            
+            <img class="logo-youtube" src="icons/youtube-logo.svg" alt="">
+        </div>
+        
+        <div class="middle-section">
+            <input class="Search-bar" type="text" placeholder="search"> 
+            <button class="buttone1">
+                <img class="ricerca" src="icons/search.svg" alt="">
+            </button>
+            <button class="buttone2">
+                <img class="voce" src="icons/voice-search-icon.svg" alt="">
+            </button>
+        </div>
+        <div class="right-section">
+            <img class="upload-icon" src="icons/upload.svg" alt="">
+            <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="">
+            <img class="notification" src="icons/notifications.svg" alt="">
+            <img class="fotoprofilo" src="sfondi/photo_2023-01-11_18-46-35.jpg" alt="">
+        </div>
+    </div>
+    <section>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Talking Tech and AI with Google & CEO Sundar Pichai!
+                    </p>
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
+                    <p class="Video-stats">
+                        3.4M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Altri video-preview simili -->
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/riso.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="sfondi/foto profilo.jpg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Dont Laugh | Video officiale
+                    </p>
+                    <p class="video-author">
+                        Antonio Commesa
+                    </p>
+                    <p class="Video-stats">
+                        3M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-12.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        What would happen if you didnt drink water?                    </p>
+                    <p class="video-author">
+                        eliot channel
+                    </p>
+                    <p class="Video-stats">
+                        4M views &#183; 1 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <section>
+
+        
+        <!-- Altri video-preview simili -->
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-11.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Scopri cosa c'e nel fondo marino | Video Documentario
+                    </p>
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
+                    <p class="Video-stats">
+                        14M views &#183; 1 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-10.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Scopri la cucina Asiatica                    </p>
+                    <p class="video-author">
+               chink pinl                    </p>
+                    <p class="Video-stats">
+                        100M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-9.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Esersci per aver un Corpo forte in 10 giorni                    </p>
+                    <p class="video-author">
+burno mars                    </p>
+                    <p class="Video-stats">
+                        100 K views &#183; 5 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+
+        
+        <!-- Altri video-preview simili -->
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-11.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Scopri cosa c'e nel fondo marino | Video Documentario
+                    </p>
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
+                    <p class="Video-stats">
+                        14M views &#183; 1 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-10.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Scopri la cucina Asiatica                    </p>
+                    <p class="video-author">
+               chink pinl                    </p>
+                    <p class="Video-stats">
+                        100M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-9.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Esersci per aver un Corpo forte in 10 giorni                    </p>
+                    <p class="video-author">
+burno mars                    </p>
+                    <p class="Video-stats">
+                        100 K views &#183; 5 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-7.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Perche L'aerio non passa qui? Scoprilo ora [video Documenetario]
+                    </p>
+                    <p class="video-author">
+                        capparezza elian
+                    </p>
+                    <p class="Video-stats">
+                       200M views &#183; 100 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Altri video-preview simili -->
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                        Questo video non ha un titolo?
+                    </p>
+                    <p class="video-author">
+                       been
+                    </p>
+                    <p class="Video-stats">
+                        3.4M views &#183; 9 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">  
+            <div class="thumbnail-row"> 
+                <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="Thumbnail 1">
+            </div>
+            <div> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/channel-1.jpeg" alt="Channel 1">
+                </div>
+                <div class="video-info right-align">
+                    <p class="Video-title">
+                      Scopri come Si fanno i calcoli in matematica ?
+                    </p>
+                    <p class="video-author">
+                        wiliam smith
+                    </p>
+                    <p class="Video-stats">
+                        94M views &#183; 3 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+  
+  <!-- Site footer -->
+  <footer class="footer">
+
+<p class="scritta">BY AMINE SALHI</p>
+  
+</footer>
+
+</body>
+</html>
