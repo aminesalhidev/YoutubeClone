@@ -18,7 +18,7 @@ Questo progetto è stato un importante passo nella mia crescita come sviluppator
 - 
 ## Contatti
 
-Se desideri discutere il progetto, condividere feedback o semplicemente scambiare idee, non esitare a contattarmi all'indirizzo email [tuo@email.com].
+Se desideri discutere il progetto, condividere feedback o semplicemente scambiare idee, non esitare a contattarmi all'indirizzo email [aminesalhioriginale@gmail.com].
 
 Grazie per aver esplorato il mio clone di YouTube e per aver condiviso con me questa esperienza di apprendimento!
 
