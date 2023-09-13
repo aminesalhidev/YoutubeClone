@@ -1,5 +1,5 @@
 # Progetto Clone YouTube - Esperienze e Apprendimento
-Benvenuti nel mio progetto di clone di YouTube! Come sviluppatore web in erba, ho intrapreso questo progetto per acquisire nuove competenze e conoscenze nel mondo dello sviluppo web. Questo README descriverà le principali lezioni e esperienze che ho guadagnato durante il processo.
+Benvenuti nel mio progetto di clone di YouTube! Come sviluppatore web , ho intrapreso questo progetto per acquisire nuove competenze e conoscenze nel mondo dello sviluppo web. Questo README descriverà le principali lezioni e esperienze che ho guadagnato durante il processo.
 
 ## Lezioni Apprese
 
